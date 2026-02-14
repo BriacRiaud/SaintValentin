@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🔒 ??? 🔒</title>
+    <link rel="stylesheet" href="supreme.css">
+</head>
+<body>
+    <!-- Phase 1: Fond noir mystérieux avec cadenas -->
+    <div class="mystery-screen" id="mysteryScreen">
+        <div class="mystery-background"></div>
+        <div class="lock-container" id="lockContainer">
+            <div class="lock-glow"></div>
+            <div class="lock-icon" id="lockIcon">
+                🔒
+            </div>
+        </div>
+    </div>
+
+    <!-- Phase 2: Fond d'écran + Message qui apparaît -->
+    <div class="reveal-screen hidden" id="revealScreen">
+        <!-- Fond d'écran personnalisé -->
+        <div class="background-image" id="backgroundImage">
+            <!-- Remplace "votre-fond.jpg" par ton image de fond -->
+            <img src="images/cactus.png" alt="Fond" id="bgImg">
+        </div>
+
+        <!-- Message qui s'écrit lettre par lettre -->
+        <div class="message-container" id="messageContainer">
+            <div class="typewriter-message">
+                <span id="typewriterText"></span><span class="cursor-blink">|</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Audio (musique qui se lance) -->
+    <audio id="celebrationMusic" loop>
+        <!-- Remplace "votre-musique.mp3" par ta musique -->
+        <source src="music/bb.mp3" type="audio/mpeg">
+    </audio>
+
+    <script src="supreme.js"></script>
+</body>
+</html>

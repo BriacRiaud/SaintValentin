@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>💕 Test de Compatibilité Amoureuse 💕</title>
+    <link rel="stylesheet" href="test.css">
+</head>
+<body>
+
+    <button id="musicBtn">🔇</button>
+
+    <audio id="monAudio" loop>
+        <source src="music/somedy.mp3" type="audio/mpeg">
+    </audio>
+
+    <div class="stars" id="stars"></div>
+
+    <div class="container">
+        <h1>💕 Test de Compatibilité 💕</h1>
+        <p class="subtitle">Découvre le taux d'amour entre deux âmes...</p>
+
+        <!-- Formulaire -->
+        <div class="form-section" id="formSection">
+            <div class="input-group">
+                <div class="input-wrapper">
+                    <span class="input-icon">👤</span>
+                    <input type="text" id="name1" placeholder="Premier prénom..." maxlength="20">
+                </div>
+            </div>
+
+            <div class="plus-icon">💖</div>
+
+            <div class="input-group">
+                <div class="input-wrapper">
+                    <span class="input-icon">👤</span>
+                    <input type="text" id="name2" placeholder="Deuxième prénom..." maxlength="20">
+                </div>
+            </div>
+
+            <button class="submit-btn" onclick="startCalculation()">
+                ✨ Calculer la Compatibilité ✨
+            </button>
+        </div>
+
+        <!-- Section de chargement -->
+        <div class="loading-section" id="loadingSection">
+            <div class="loading-text">Analyse en cours...</div>
+            <div class="hearts-container">
+                <span class="loading-heart">💕</span>
+                <span class="loading-heart">💖</span>
+                <span class="loading-heart">💗</span>
+            </div>
+            <div class="calculating-messages" id="calculatingMessages"></div>
+        </div>
+
+        <!-- Section résultat -->
+        <div class="result-section" id="resultSection">
+            <div class="names-display">
+                <span id="displayName1"></span>
+                <span class="heart-separator">💝</span>
+                <span id="displayName2"></span>
+            </div>
+
+            <div class="progress-container">
+                <div class="progress-label">Taux de Compatibilité</div>
+                <div class="progress-bar-wrapper">
+                    <div class="progress-bar" id="progressBar">
+                        <span class="progress-percentage" id="progressPercentage">0%</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="percentage-display" id="percentageDisplay">0%</div>
+            
+            <div class="result-icon" id="resultIcon"></div>
+            <div class="result-message" id="resultMessage"></div>
+
+            <div class="action-buttons">
+                <button class="btn" onclick="resetTest()">🔄 Recommencer</button>
+                <button class="btn btn-secondary" onclick="goHome()">🏠 Accueil</button>
+            </div>
+        </div>
+
+        <!-- Section animation spéciale -->
+        <div class="special-animation" id="specialAnimation">
+            <div class="explosion-hearts" id="explosionHearts"></div>
+            <div class="flying-emojis" id="flyingEmojis"></div>
+            <div class="rainbow-text" id="rainbowText">ON S'AIME TROP OUAI  !</div>
+            <div class="final-image-container" id="finalImageContainer">
+                <img src="" alt="Love" id="finalImage" class="final-image">
+            </div>
+        </div>
+    </div>
+
+    <script src="test.js"></script>
+    <script src="progress.js"></script>
+</body>
+</html>

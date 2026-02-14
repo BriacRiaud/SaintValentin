@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pour Toi ❤️ Saint-Valentin 2026</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <button id="musicBtn">🔇</button>
+
+    <audio id="monAudio" loop>
+        <source src="music/home.mp3" type="audio/mpeg">
+    </audio>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="stars" id="stars"></div>
+        <div class="floating-hearts" id="floatingHearts"></div>
+        
+        <div class="hero-content">
+            <h1>❤️ Pour Toi ❤️</h1>
+            <div class="typewriter" id="typewriter">
+                <span id="text"></span><span class="cursor"></span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Mini-Jeux -->
+    <section class="minigames-section">
+        <h2 class="section-title">🎮 3 minix-jeu que j'ai fais pour toi 🎮</h2>
+        
+        <div class="minigames-container">
+            <!-- Mini-Jeu 1 : Test de Compatibilité -->
+            <div class="minigame-card" onclick="window.location.href='test.html'">
+                <div class="badge" id="badge-test"></div>
+                <div class="minigame-icon">💕</div>
+                <h3>Test de Compatibilité</h3>
+            </div>
+
+            <!-- Mini-Jeu 2 : Attrape les Cœurs -->
+            <div class="minigame-card" onclick="window.location.href='aim.html'">
+                <div class="badge" id="badge-aim"></div>
+                <div class="minigame-icon">🎯</div>
+                <h3>CliCoeur</h3>
+            </div>
+
+            <!-- Mini-Jeu 3 : Quiz -->
+            <div class="minigame-card" onclick="window.location.href='quizz.html'">
+                <div class="badge" id="badge-quiz"></div>
+                <div class="minigame-icon">🧠</div>
+                <h3>Quiz sur Moi</h3>
+            </div>
+        </div>
+
+        <!-- Mini-Jeu Secret -->
+        <div class="secret-game-section" id="secretGameSection">
+            <div class="secret-game-card" id="secretGameCard">
+                <!-- Version Verrouillée -->
+                <div id="secretLocked">
+                    <div class="lock-icon">
+                        <div class="heart-lock">
+                            🔒
+                            <div class="heart-lock-heart">❤️</div>
+                        </div>
+                    </div>
+                    <h3 class="secret-title">??????</h3>
+                    <div class="progress-tracker">
+                        <div class="progress-item" id="progress-test">
+                            <span class="progress-icon">💕</span>
+                            <span class="progress-label">Test de Compatibilité</span>
+                            <span class="progress-status" id="status-test">❌</span>
+                        </div>
+                        <div class="progress-item" id="progress-aim">
+                            <span class="progress-icon">🎯</span>
+                            <span class="progress-label">CliCoeur</span>
+                            <span class="progress-status" id="status-aim">❌</span>
+                        </div>
+                        <div class="progress-item" id="progress-quiz">
+                            <span class="progress-icon">🧠</span>
+                            <span class="progress-label">Quiz sur Moi</span>
+                            <span class="progress-status" id="status-quiz">❌</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Version Débloquée -->
+                <div id="secretUnlocked" class="hidden">
+                    <div class="unlock-icon">
+                        <div class="heart-unlock">
+                            🤫
+                        </div>
+                    </div>
+                    <h3 class="secret-title-unlocked"> Bravo </h3>
+                    <button class="supreme-btn" onclick="window.location.href='supreme.html'">
+                        ...
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Stats -->
+    <section class="stats-section">
+        <h2 class="section-title">💖 Stats de fou sur nous 100% fiables 💖</h2>
+        <div class="stats-container">
+            <div class="stat-box">
+                <div class="stat-icon">⏰</div>
+                <div class="stat-label">Temps depuis qu'on se connaît</div>
+                <div class="stat-value" id="timeCounter">0 jours</div>
+            </div>
+            
+            <div class="stat-box">
+                <div class="stat-icon">💬</div>
+                <div class="stat-label">Messages envoyés sur insta</div>
+                <div class="stat-value">78 186</div>
+            </div>
+        
+        </div>
+    </section>
+
+    <!-- Inclure le système de progression -->
+    <script src="progress.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

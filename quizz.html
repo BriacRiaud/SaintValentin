@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>💕 Quiz de l'Amour 💕</title>
+<link rel="stylesheet" href="quizz.css">
+</head>
+<body>
+<div class="stars" id="stars"></div>
+<div class="container">
+<h1>💕 Connais tu bien ton boyfriend! (moi) 💕</h1>
+<p class="subtitle">Si tu as 2 fautes ou plus, tu lui dois tout ce qu'il veut 😏</p>
+<!-- Écran de démarrage -->
+<div class="start-screen" id="startScreen">
+<div class="start-icon">📝💖</div>
+<p style="font-size: 1.5rem; color: #fff; margin-bottom: 30px;">
+                10 questions pour savoir si t'es trop ma femme!
+</p>
+<button class="start-btn" onclick="startQuiz()">
+                ✨ Commencer le Quiz ✨
+</button>
+</div>
+<!-- Section Quiz -->
+<div class="quiz-section" id="quizSection">
+<!-- Barre de progression -->
+<div class="progress-container">
+<div class="progress-info">
+<span>Question <span id="currentQuestion">1</span>/10</span>
+<span>Score: <span id="currentScore">0</span>/10</span>
+</div>
+<div class="progress-bar-wrapper">
+<div class="progress-bar" id="progressBar" style="width: 0%"></div>
+</div>
+</div>
+<!-- Question -->
+<div class="question-container">
+<div class="question-text" id="questionText">
+                    Chargement de la question...
+</div>
+<!-- Grille de réponses -->
+<div class="answers-grid" id="answersGrid">
+<div class="answer-option" onclick="selectAnswer(0)">
+<div class="answer-number">1️⃣</div>
+<div class="answer-image" id="answer0">
+                            Image 1
+</div>
+</div>
+<div class="answer-option" onclick="selectAnswer(1)">
+<div class="answer-number">2️⃣</div>
+<div class="answer-image" id="answer1">
+                            Image 2
+</div>
+</div>
+<div class="answer-option" onclick="selectAnswer(2)">
+<div class="answer-number">3️⃣</div>
+<div class="answer-image" id="answer2">
+                            Image 3
+</div>
+</div>
+<div class="answer-option" onclick="selectAnswer(3)">
+<div class="answer-number">4️⃣</div>
+<div class="answer-image" id="answer3">
+                            Image 4
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Section Résultat -->
+<div class="result-section" id="resultSection">
+<div class="result-icon" id="resultIcon"></div>
+<h2 style="font-size: 3rem; color: #fff; margin-bottom: 20px;">Quiz Terminé !</h2>
+<div class="score-display">
+<span id="finalScore">0</span>/10
+</div>
+<div class="result-message" id="resultMessage"></div>
+<div class="action-buttons">
+<button class="btn" onclick="restartQuiz()">🔄 Recommencer</button>
+<button class="btn btn-secondary" onclick="goHome()">🏠 Accueil</button>
+</div>
+</div>
+</div>
+<script src="quizz.js"></script>
+<script src="progress.js"></script>
+</body>
+</html>

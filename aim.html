@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>💕 Jeu d'Amour - Attrape les Cœurs 💕</title>
+    <link rel="stylesheet" href="aim.css">
+</head>
+<body>
+    <!-- Écran de démarrage -->
+    <div class="start-screen" id="startScreen">
+        <h1>💕 Attrape Mon Cœur 💕</h1>
+        <p>Montre-moi à quel point tu peux attraper mon amour !</p>
+        <button class="start-btn" onclick="startGame()">❤️ Commencer ❤️</button>
+    </div>
+
+    <!-- Zone de jeu -->
+    <div class="game-container" id="gameContainer">
+        <!-- Vidéo de fond -->
+        <video id="backgroundVideo" class="background-video" loop muted playsinline>
+            <source src="images/potter.mp4" type="video/mp4">
+            <!-- Remplace "votre-video.mp4" par le chemin de ta vidéo -->
+        </video>
+
+        <!-- HUD -->
+        <div class="hud">
+            <div class="hud-item">
+                <div class="hud-label">Score</div>
+                <div class="hud-value" id="score">0</div>
+            </div>
+            <div class="hud-item">
+                <div class="hud-label">Temps</div>
+                <div class="hud-value" id="timer">30</div>
+            </div>
+        </div>
+
+        <!-- Zone de jeu -->
+        <div class="game-area" id="gameArea">
+            <!-- Effets qui dérangent -->
+            <div class="glitch-overlay" id="glitchOverlay"></div>
+            <div class="spinning-emoji" id="spinningEmoji"></div>
+            <div class="screen-flash" id="screenFlash"></div>
+            <div class="random-text" id="randomText"></div>
+            <div class="zoom-effect" id="zoomEffect"></div>
+        </div>
+
+        <!-- Écran de fin -->
+        <div class="end-screen" id="endScreen">
+            <h2>💖 Partie Terminée 💖</h2>
+            <div class="final-score">
+                Score: <span id="finalScore">0</span>
+            </div>
+            
+            <!-- Section Récompense -->
+            <div class="reward-section" id="rewardSection">
+                <div class="reward-icon" id="rewardIcon"></div>
+                <div class="reward-title" id="rewardTitle"></div>
+                <div class="reward-message" id="rewardMessage"></div>
+            </div>
+
+            <div class="btn-group">
+                <button class="btn" onclick="restartGame()">🔄 Rejouer</button>
+                <button class="btn btn-secondary" onclick="goHome()">🏠 Accueil</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="aim.js"></script>
+    <script src="progress.js"></script>
+</body>
+</html>
